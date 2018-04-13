@@ -1,0 +1,77 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.diseasesymptom">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".activities.DiseaseActivity"
+            android:label="@string/title_activity_disease" />
+        <activity
+            android:name=".activities.SymptomActivity"
+            android:label="@string/title_activity_symptom" />
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:label="@string/title_activity_welcome" />
+        <activity android:name=".listView.DisplayListView" />
+        <activity android:name=".listView.DisplayListView1" />
+        <activity android:name=".activities.FindQuestionnaireActivity" />
+        <activity
+            android:name=".activities.Questionnaire1Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.Questionnaire2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.Questionnaire3Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.Questionnaire4Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.Questionnaire5Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.Questionnaire6Activity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.ResultActivity" />
+        <activity android:name=".activities.AdminActivity" />
+        <activity android:name=".listView.DisplayListView2" />
+        <activity android:name=".activities.ResultAdminActivity" />
+        <activity android:name=".listView.DisplayListViewQ2" />
+        <activity android:name=".activities.ResultAdminQ1Activity" />
+        <activity android:name=".listView.DisplayListViewQ1" />
+        <activity android:name=".activities.ResultAdminQ3Activity" />
+        <activity android:name=".activities.ResultAdminQ4Activity" />
+        <activity android:name=".activities.ResultAdminQ5Activity" />
+        <activity android:name=".activities.ResultAdminQ6Activity" />
+        <activity android:name=".listView.DisplayListViewQ3" />
+        <activity android:name=".listView.DisplayListVIewQ4" />
+        <activity android:name=".listView.DisplayListViewQ5" />
+        <activity android:name=".listView.DisplayListViewQ6" />
+        <activity android:name=".listView.DisplayListHistory" />
+    </application>
+</manifest>
