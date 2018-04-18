@@ -63,6 +63,7 @@ public class ResultActivity extends AppCompatActivity {
                             Intent intent = new Intent(ResultActivity.this, DisplayListView.class);
                             intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
                             startActivity(intent);
+                            ResultActivity.this.finish();
                         }
                     }, 1000);
                 }

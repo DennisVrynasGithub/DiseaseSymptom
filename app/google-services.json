@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "670637955223",
+    "firebase_url": "https://diseasesymptom.firebaseio.com",
+    "project_id": "diseasesymptom",
+    "storage_bucket": "diseasesymptom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670637955223:android:4cad6ebe34823cbd",
+        "android_client_info": {
+          "package_name": "com.example.diseasesymptom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670637955223-s2r74inls16aeuefe84en87kk18g63tr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMutUHYKRDmIa5D0EIuKNlPgXo-HapTjI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

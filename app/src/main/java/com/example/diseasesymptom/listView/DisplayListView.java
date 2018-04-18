@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.diseasesymptom.R;
@@ -33,6 +34,7 @@ public class DisplayListView extends AppCompatActivity {
     JSONArray jsonArray;
     PlayerAdapter playerAdapter;
     ListView listView;
+    TextView txHeader;
     Button button_add_history_disease;
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
@@ -49,6 +51,7 @@ public class DisplayListView extends AppCompatActivity {
         Json_string = getIntent().getExtras().getString("Json_data");
         user_id = getIntent().getExtras().getString("json_user_id");
         listView = findViewById(R.id.listview);
+        txHeader = findViewById(R.id.textView82);
         button_add_history_disease = findViewById(R.id.button3);
         playerAdapter = new PlayerAdapter(this, R.layout.activity_row_layout);
         listView.setAdapter(playerAdapter);
@@ -75,6 +78,7 @@ public class DisplayListView extends AppCompatActivity {
                 a2z = JO.getString("a2z");
                 fact = JO.getString("fact");
                 description = JO.getString("description");
+                txHeader.setText(name);
                 Players players = new Players(id, a2z, name, fact, description);
                 playerAdapter.add(players);
                 count++;

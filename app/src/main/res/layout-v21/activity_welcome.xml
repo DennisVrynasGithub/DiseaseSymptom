@@ -73,7 +73,7 @@
         android:background="@android:color/transparent"
         android:text="@string/logout"
         android:textAlignment="viewStart"
-        android:textColor="?attr/colorAccent"
+        android:textColor="@android:color/holo_red_light"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

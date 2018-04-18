@@ -56,4 +56,11 @@ public class DashboardActivity extends AppCompatActivity {
             });
         }
     }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//     // The rest of your onStart() code.
+//        EasyTracker.getInstance(this).activityStart(this);  // Add this method.
+//    }
+
 }

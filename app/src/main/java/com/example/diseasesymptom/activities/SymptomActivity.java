@@ -133,15 +133,19 @@ public class SymptomActivity extends AppCompatActivity {
             public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
                 jsonString = response.body().toString();
                 Log.i("onResponse", jsonString);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
-                        intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
-                        intent.putExtra("json_user_id", json_user_id);
-                        startActivity(intent);
-                    }
-                }, 1000);
+                if(jsonString.equals("[]")){
+                    Toast.makeText(SymptomActivity.this, "We can't find diseases with this symptom!", Toast.LENGTH_LONG).show();
+                }else {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
+                            intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
+                            intent.putExtra("json_user_id", json_user_id);
+                            startActivity(intent);
+                        }
+                    }, 1000);
+                }
             }
 
             @Override
@@ -164,14 +168,18 @@ public class SymptomActivity extends AppCompatActivity {
             public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
                 jsonString = response.body().toString();
                 Log.i("onResponse", jsonString);
-                 new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
-                        intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
-                        startActivity(intent);
-                    }
-                }, 1000);
+                if(jsonString.equals("[]")){
+                    Toast.makeText(SymptomActivity.this, "We can't find disease with these symptom!", Toast.LENGTH_LONG).show();
+                }else {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
+                            intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
+                            startActivity(intent);
+                        }
+                    }, 1000);
+                }
             }
 
             @Override
@@ -193,14 +201,18 @@ public class SymptomActivity extends AppCompatActivity {
             public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
                 jsonString = response.body().toString();
                 Log.i("onResponse", jsonString);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
-                        intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
-                        startActivity(intent);
-                    }
-                }, 1000);
+                if (jsonString.equals("[]")) {
+                    Toast.makeText(SymptomActivity.this, "We can't find disease with these symptom!", Toast.LENGTH_LONG).show();
+                } else {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
+                            intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
+                            startActivity(intent);
+                        }
+                    }, 1000);
+                }
             }
 
             @Override
@@ -222,14 +234,18 @@ public class SymptomActivity extends AppCompatActivity {
             public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
                 jsonString = response.body().toString();
                 Log.i("onResponse", jsonString);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
-                        intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
-                        startActivity(intent);
-                    }
-                }, 1000);
+                if (jsonString.equals("[]")) {
+                    Toast.makeText(SymptomActivity.this, "We can't find disease with these symptom!", Toast.LENGTH_LONG).show();
+                } else {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
+                            intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
+                            startActivity(intent);
+                        }
+                    }, 1000);
+                }
             }
 
             @Override
@@ -251,18 +267,18 @@ public class SymptomActivity extends AppCompatActivity {
             public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
                 jsonString = response.body().toString();
                 Log.i("onResponse", jsonString);
-                if (jsonString.equals("[]")) {
-                    Toast.makeText(SymptomActivity.this, "Empty symptoms!!", Toast.LENGTH_LONG).show();
-                } else {
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
-                            intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
-                            startActivity(intent);
-                        }
-                    }, 1000);
-                }
+                if(jsonString.equals("[]")){
+                    Toast.makeText(SymptomActivity.this, "We can't find disease with these symptom!", Toast.LENGTH_LONG).show();
+                }else {
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent intent = new Intent(SymptomActivity.this, DisplayListView1.class);
+                                intent.putExtra("Json_data", "{ disease:" + jsonString + "}");
+                                startActivity(intent);
+                            }
+                        }, 1000);
+                    }
             }
 
             @Override

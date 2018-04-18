@@ -95,7 +95,7 @@
     <string name="register_failed">REGISTER FAILED</string>
     <string name="register_successful">REGISTER SUCCESSFUL</string>
     <string name="loading_please_wait">Loading.......please wait</string>
-    <string name="type_the_disease_that_you_want">Type the disease that you want</string>
+    <string name="type_the_disease_that_you_want">Choose a disease</string>
     <string name="results">Results</string>
     <string name="contact_with_us_for_further_details">Contact with us for further details</string>
     <string name="if_you_don_t_have_sign_up_yet_please_register">If you don\'t have sign up yet please register</string>
@@ -118,7 +118,7 @@
     <string name="logout">Logout</string>
     <string name="admin">Admin</string>
     <string name="welcome_to_our_app">Welcome to our app</string>
-    <string name="type_your_symptoms">type your symptoms</string>
-    <string name="find_it">Find it</string>
+    <string name="type_your_symptoms">Enter your symptoms</string>
+    <string name="find_it">Find disease</string>
 
 </resources>

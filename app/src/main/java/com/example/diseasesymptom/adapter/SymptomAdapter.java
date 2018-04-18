@@ -80,8 +80,6 @@ public class SymptomAdapter extends ArrayAdapter {
                 Intent intent = new Intent(c.getApplicationContext(), ResultActivity.class);
                 intent.putExtra("Json_data", playerHolder.column1.getText().toString());
                 c.startActivity(intent);
-
-
             }
         });
         return row;
