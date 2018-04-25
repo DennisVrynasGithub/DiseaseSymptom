@@ -1,10 +1,14 @@
 package com.example.diseasesymptom.listView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.diseasesymptom.R;
+import com.example.diseasesymptom.activities.WelcomeActivity;
 import com.example.diseasesymptom.adapter.SymptomAdapter;
 import com.example.diseasesymptom.model.Symptoms;
 
@@ -18,11 +22,23 @@ public class DisplayListView1 extends AppCompatActivity {
     JSONArray jsonArray;
     SymptomAdapter symptomAdapter;
     ListView listView;
+    ImageView home_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_list_view1);
+
+        home_image = findViewById(R.id.imageView16);
+
+        home_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayListView1.this, WelcomeActivity.class);
+                startActivity(intent);
+                DisplayListView1.this.finish();
+            }
+        });
 
         //Receive Json
         String json_string = getIntent().getExtras().getString("Json_data");

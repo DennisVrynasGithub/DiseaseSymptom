@@ -1,15 +1,18 @@
 package com.example.diseasesymptom.listView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.diseasesymptom.R;
+import com.example.diseasesymptom.activities.WelcomeActivity;
 import com.example.diseasesymptom.adapter.PlayerAdapter;
 import com.example.diseasesymptom.model.AddHistoryRequest;
 import com.example.diseasesymptom.model.AddHistoryResponse;
@@ -36,6 +39,7 @@ public class DisplayListView extends AppCompatActivity {
     ListView listView;
     TextView txHeader;
     Button button_add_history_disease;
+    ImageView home_image;
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     private Api api;
@@ -53,10 +57,20 @@ public class DisplayListView extends AppCompatActivity {
         listView = findViewById(R.id.listview);
         txHeader = findViewById(R.id.textView82);
         button_add_history_disease = findViewById(R.id.button3);
+        home_image = findViewById(R.id.imageView15);
         playerAdapter = new PlayerAdapter(this, R.layout.activity_row_layout);
         listView.setAdapter(playerAdapter);
 
         user_id = prefs.getString("user_id_sp", null);
+
+        home_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DisplayListView.this, WelcomeActivity.class);
+                startActivity(intent);
+                DisplayListView.this.finish();
+            }
+        });
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(G.HOST_URL)
